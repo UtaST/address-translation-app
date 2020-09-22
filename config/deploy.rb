@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "address-translation-app"
-set :repo_url, "git@github.com/UtaST/address-translation-app.git"
+set :repo_url, "git@github.com:UtaST/address-translation-app.git"
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
