@@ -38,6 +38,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @address = User.find(current_user.id).address
   end
 
+  def update_address
+    @address = User.find(current_user.id).address
+    if @address.update(address_params)
+      redirect_to root_path
+    else
+      render :edit_address
+    end
+  end
+
   protected
 
   def address_params
