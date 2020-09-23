@@ -1,0 +1,37 @@
+<h2>住所情報登録</h2>
+<%= link_to 'トップページに戻る', root_path %>
+
+<%= form_with model: @address, url: addresses_path, local: true do |f| %>
+  <%= render "devise/shared/error_messages", model: @address %>
+
+  <div class="field">
+    <%= f.label :postal_code %><br />
+    <%= f.text_field :postal_code, id: 'postal-code', autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefecture %><br />
+    <%= f.text_field :prefecture, id: 'prefecture' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, id: 'city' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :house_number %><br />
+    <%= f.text_field :house_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :building_name %><br />
+    <%= f.text_field :building_name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "登録" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
