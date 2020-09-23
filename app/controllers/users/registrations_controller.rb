@@ -34,6 +34,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     redirect_to root_path
   end
 
+  def edit_address
+    @address = User.find(current_user.id).address
+  end
+
   protected
 
   def address_params

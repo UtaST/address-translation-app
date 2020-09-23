@@ -4,4 +4,5 @@
   <%= link_to 'ログイン', new_user_session_path %>
 <% else %>
   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+  <%= link_to '住所情報編集', addresses_edit_path(@address.id) %>
 <% end %>
