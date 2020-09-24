@@ -1,17 +1,37 @@
 body {
+  height: 100%;
   overflow: scroll;
 }
 
 .main {
-  height: calc(100vh - 100px);
+  height: calc(100% - 100px);
   width: 100%;
   display: flex;
 }
 
 .input-address-area {
+  background-color: lightblue;
   width: 50%;
+}
+
+.explanation-left {
+  color: gray;
+  font-size: 30px;
+  text-align: end;
+  margin: 20px 0px 20px;
+}
+
+.field {
+  margin: 10px;
 }
 
 .en-address-area {
   width: 50%;
+}
+  
+.explanation-right {
+  color: gray;
+  font-size: 30px;
+  text-align: start;
+  margin: 20px 0px 20px;
 }
