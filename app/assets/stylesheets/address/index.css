@@ -1,0 +1,17 @@
+body {
+  overflow: scroll;
+}
+
+.main {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+}
+
+.input-address-area {
+  width: 50%;
+}
+
+.en-address-area {
+  width: 50%;
+}
