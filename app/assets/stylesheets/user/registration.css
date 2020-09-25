@@ -1,3 +1,46 @@
+.registration {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.new-registration-form {
+  flex: 1;
+  width: 50%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.registration-title {
+  width: 100%;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.regist-form {
+  margin-top: 20px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.next-explanation {
+  width: 188px;
+}
+
 .error-message {
   list-style: none;
   color: rgb(218, 74, 74);

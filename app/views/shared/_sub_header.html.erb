@@ -1,0 +1,20 @@
+<header class="main-header">
+  <div class="main-title">
+    <h1 class="app-name">
+      住所英訳アプリ
+    </h1>
+  </div>
+  <div class="main-header-nuv">
+    <ul class="header-links">
+      <% if current_page?(new_user_registration_path) %>
+        <li><%= link_to 'トップページ', root_path %></li>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
+      <% else %>
+        <li><%= link_to 'トップページ', root_path %></li>
+        <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+
+  
