@@ -1,4 +1,6 @@
 .main-footer {
+  position: absolute;
+  bottom: 0;
   height: 50px;
   background-color: rgb(54, 53, 53);
   display: flex;
@@ -7,7 +9,6 @@
 }
 
 .main-footer-title {
-  position: absolute;
   position: absolute;
   top: 0;
   right: 0;

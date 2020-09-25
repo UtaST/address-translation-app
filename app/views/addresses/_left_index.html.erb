@@ -1,5 +1,5 @@
 <h1 class="explanation-left">左の入力欄に住所を入力すると</h1>
-<%= form_with do |f| %>
+<%= form_with class: 'top-form' do |f| %>
   <div class="field">
     <%= f.label :postal_code, '郵便番号' %><br />
     <%= f.text_field :postal_code, placeholder: '例) 000-0000', id: 'postal-code', autofocus: true %>
