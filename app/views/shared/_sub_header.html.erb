@@ -6,13 +6,17 @@
   </div>
   <div class="main-header-nuv">
     <ul class="header-links">
+      <%# ページに対応して表示するリンクを変更 %>
       <% if current_page?(new_user_registration_path) %>
         <li><%= link_to 'トップページ', root_path %></li>
         <li><%= link_to "ログイン", new_user_session_path %></li>
-      <% else %>
+      <% elsif current_page?(new_user_session_path) %>
         <li><%= link_to 'トップページ', root_path %></li>
         <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <% else %>
+        <li><%= link_to 'トップページ', root_path %></li>
       <% end %>
+      <%# /ページに対応して表示するリンクを変更 %>
     </ul>
   </div>
 </header>
