@@ -1,37 +1,42 @@
-<h2>住所情報編集</h2>
-<%= link_to 'トップページに戻る', root_path %>
+<%= render 'shared/sub_header' %>
+<div class="address">
+  <div class="address-forms">
+    <div class="address-title">
+      住所情報編集
+    </div>
 
-<%= form_with model: @address, url: addresses_update_path, local: true do |f| %>
-  <%= render "devise/shared/error_messages", model: @address %>
+    <%= form_with model: @address, url: addresses_update_path, class: 'address-form', local: true do |f| %>
+      <%= render "devise/shared/error_messages", model: @address %>
 
-  <div class="field">
-    <%= f.label :postal_code %><br />
-    <%= f.text_field :postal_code, id: 'postal-code', autofocus: true %>
+      <div class="field">
+        <%= f.label :postal_code %><br />
+        <%= f.text_field :postal_code, placeholder: '例) 000-0000', id: 'postal-code', autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :prefecture %><br />
+        <%= f.text_field :prefecture, placeholder: '例) 〇〇県', id: 'prefecture' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city, placeholder: '例) 〇〇市〇〇区', id: 'city' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :house_number %><br />
+        <%= f.text_field :house_number, placeholder: '例) 0-00-0' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :building_name %><br />
+        <%= f.text_field :building_name, placeholder: '例) 〇〇ビル' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "更新" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :prefecture %><br />
-    <%= f.text_field :prefecture, id: 'prefecture' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city, id: 'city' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :house_number %><br />
-    <%= f.text_field :house_number %>
-  </div>
-
-  <div class="field">
-    <%= f.label :building_name %><br />
-    <%= f.text_field :building_name %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "更新" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+<%= render 'shared/sub_footer' %>

@@ -1,0 +1,43 @@
+.main {
+  height: calc(100% - 100px);
+  width: 100%;
+  display: flex;
+}
+
+.input-address-area {
+  background-color: lightblue;
+  width: 50%;
+  height: 100%;
+}
+
+.explanation-left {
+  color: gray;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 0px 20px;
+}
+
+.top-form {
+  margin: 20px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.field {
+  margin: 10px;
+}
+
+.en-address-area {
+  width: 50%;
+  height: 100%;
+}
+  
+.explanation-right {
+  color: gray;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 0px 20px;
+}

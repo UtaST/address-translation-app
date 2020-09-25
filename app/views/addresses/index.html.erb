@@ -1,8 +1,10 @@
-<h1>トップページ</h1>
-<% unless user_signed_in? %>
-  <%= link_to '新規登録', new_user_registration_path %>
-  <%= link_to 'ログイン', new_user_session_path %>
-<% else %>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-  <%= link_to '住所情報編集', addresses_edit_path(@address.id) %>
-<% end %>
+<%= render "shared/main_header" %>
+<div class="main">
+  <div class="input-address-area">
+    <%= render "addresses/left_index" %>
+  </div>
+  <div class="en-address-area">
+    <%= render "addresses/right_index" %>
+  </div>
+</div>
+<%= render "shared/main_footer" %>

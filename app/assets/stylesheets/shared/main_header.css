@@ -1,0 +1,32 @@
+.main-header {
+  height: 50px;
+  background-color: rgb(54, 53, 53);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-title {
+  position: absolute;
+  left: 50px;
+}
+
+.app-name {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.main-header-nuv {
+  position: absolute;
+  right: 100px;
+}
+
+.header-links {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: #ffffff;
+}

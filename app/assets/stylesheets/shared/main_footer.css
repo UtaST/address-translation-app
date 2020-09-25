@@ -1,0 +1,41 @@
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  background-color: rgb(54, 53, 53);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-footer-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 210px;
+  height: 30px;
+}
+
+.app-name-footer {
+  font-size: 30px;
+  color: white;
+}
+
+.move-btn {
+  position: absolute;
+  right: 20px;
+}
+
+.move-btn-icon {
+  height: 16 px;
+  width: 16px;
+}
+
+.move-text {
+  color: #fff;
+}
+
+

@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

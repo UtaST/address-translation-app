@@ -1,0 +1,32 @@
+<h1 class="explanation-left">左の入力欄に住所を入力すると</h1>
+<%= form_with class: 'top-form' do |f| %>
+  <div class="field">
+    <%= f.label :postal_code, '郵便番号' %><br />
+    <%= f.text_field :postal_code, placeholder: '例) 000-0000', id: 'postal-code', autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefecture, '都道府県' %><br />
+    <%= f.text_field :prefecture, placeholder: '例) 〇〇県', id: 'prefecture' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city, '市区町村' %><br />
+    <%= f.text_field :city, placeholder: '例) 〇〇市〇〇区', id: 'city' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :house_number, '番地・号' %><br />
+    <%= f.text_field :house_number, placeholder: '例) 0-00-0', id: 'house-number' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :building_name, 'アパート/建物名' %><br />
+    <%= f.text_field :building_name, placeholder: '例) 〇〇ビル', id: 'building-name' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room_number, '部屋番号' %><br />
+    <%= f.text_field :room_number, placeholder: '例) 101', id: 'room-number' %>
+  </div>
+<% end %>

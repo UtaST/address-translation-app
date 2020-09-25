@@ -1,4 +1,4 @@
-.registration {
+.address {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -6,14 +6,14 @@
   background-color: lightgray;
 }
 
-.new-registration-form {
+.address-forms {
   flex: 1;
   width: 50%;
   padding: 20px;
   background-color: #fff;
 }
 
-.registration-title {
+.address-title {
   width: 100%;
   font-size: 25px;
   font-weight: bolder;
@@ -21,19 +21,10 @@
   margin-bottom: 10px;
 }
 
-.regist-form {
+.address-form {
   margin-top: 20px;
   height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.next-explanation {
-  width: 188px;
-}
-
-.error-message {
-  list-style: none;
-  color: rgb(218, 74, 74);
 }
