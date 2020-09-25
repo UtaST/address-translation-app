@@ -1,33 +1,39 @@
-<h2>ログイン</h2>
-<%= link_to 'トップページに戻る', root_path %>
-
-<%= form_with model: @user, url: new_user_session_path, local: true do |f| %>
-  
-  <div calss="login-flash-message">
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<%= render 'shared/sub_header' %>
+<div class="session">
+  <div class="new-session-form">
+    <div class="session-title">
+      ログイン
     </div>
-  <% end %>
+    <%= form_with model: @user, url: new_user_session_path, class: 'session-form', local: true do |f| %>
+      
+      <div class="login-flash-message">
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
+      
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+<%= render 'shared/sub_footer' %>
+
