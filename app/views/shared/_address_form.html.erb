@@ -1,0 +1,29 @@
+<div class="field">
+  <%= form.label :postal_code, '郵便番号(7桁)' %><br />
+  <%= form.text_field :postal_code, placeholder: '例) 0000000(7桁)', id: 'postal_code', autofocus: true %>
+</div>
+
+<div class="field">
+  <%= form.label :prefecture_code, '都道府県' %><br />
+  <%= form.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: '選択してください'}, id: 'prefecture_code' %>
+</div>
+
+<div class="field">
+  <%= form.label :city, '市区町村' %><br />
+  <%= form.text_field :city, placeholder: '例) 〇〇市〇〇区', id: 'city' %>
+</div>
+
+<div class="field">
+  <%= form.label :house_number, '番地・号' %><br />
+  <%= form.text_field :house_number, placeholder: '例) 0-00-0', id: 'house_number' %>
+</div>
+
+<div class="field">
+  <%= form.label :building_name, 'アパート/建物名' %><br />
+  <%= form.text_field :building_name, placeholder: '例) 〇〇ビル', id: 'building_name' %>
+</div>
+
+<div class="field">
+  <%= form.label :room_number, '部屋番号' %><br />
+  <%= form.text_field :room_number, placeholder: '例) 101', id: 'room_number' %>
+</div>
