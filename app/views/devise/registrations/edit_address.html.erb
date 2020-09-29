@@ -5,36 +5,12 @@
       住所情報編集
     </div>
 
-    <%= form_with model: @address, url: addresses_update_path, class: 'address-form', local: true do |f| %>
+    <%= form_with model: @address, url: addresses_update_path, class: 'address-form', local: true do |form| %>
       <%= render "devise/shared/error_messages", model: @address %>
-
-      <div class="field">
-        <%= f.label :postal_code %><br />
-        <%= f.text_field :postal_code, placeholder: '例) 000-0000', id: 'postal-code', autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :prefecture %><br />
-        <%= f.text_field :prefecture, placeholder: '例) 〇〇県', id: 'prefecture' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :city %><br />
-        <%= f.text_field :city, placeholder: '例) 〇〇市〇〇区', id: 'city' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :house_number %><br />
-        <%= f.text_field :house_number, placeholder: '例) 0-00-0' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :building_name %><br />
-        <%= f.text_field :building_name, placeholder: '例) 〇〇ビル' %>
-      </div>
+      <%= render "shared/address_form", form: form %>
 
       <div class="actions">
-        <%= f.submit "更新" %>
+        <%= form.submit "更新" %>
       </div>
     <% end %>
   </div>
