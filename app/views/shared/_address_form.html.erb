@@ -4,8 +4,8 @@
 </div>
 
 <div class="field">
-  <%= form.label :prefecture_code, '都道府県' %><br />
-  <%= form.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: '選択してください'}, id: 'prefecture_code' %>
+  <%= form.label :prefecture, '都道府県' %><br />
+  <%= form.collection_select :prefecture, JpPrefecture::Prefecture.all, :name, :name, { prompt: '選択してください'}, id: 'prefecture' %>
 </div>
 
 <div class="field">
