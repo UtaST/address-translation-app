@@ -27,7 +27,7 @@ class AddressesController < ApplicationController
       en_building_name[-4, 4] = '-building'
     elsif en_building_name.match(/manshon\z/) # 「〜マンション」の場合
       en_building_name.insert(-8, '-')
-    elsif en_building_name.match(/apa^to\z/) # 「〜アパート」の場合
+    elsif en_building_name.include?("apa^to") # 「〜アパート」の場合
       en_building_name[-6, 6] = '-apartment'
     end
     address.building_name = en_building_name.capitalize! # 頭文字を大文字に変換
@@ -50,12 +50,12 @@ class AddressesController < ApplicationController
       slice_point = address.city.index("市") 
       shi = address.city.slice!(0..slice_point) # 「〜市」と「〜区」を分離
       en_shi = Kakasi.kakasi('-Ja -Ha -Ka', shi.insert(-2, "-")).capitalize! # 〜市を英訳
-      en_city = Kakasi.kakasi('-Ja -Ha -Ka', address.city.insert(-2, "-")).capitalize! + " #{en_shi}" # 〜区を英訳、統合
+      en_city = "#{en_shi} " + Kakasi.kakasi('-Ja -Ha -Ka', address.city.insert(-2, "-")).capitalize! # 〜区を英訳、統合
     elsif address.city[-1] == "町" || address.city[-1] == "村" # 〇〇郡〇〇町(村)の場合true
       slice_point = address.city.index("郡")
       gun = address.city.slice!(0..slice_point) # 「〜郡」と「〜町(村)」を分離
       en_gun = Kakasi.kakasi('-Ja -Ha -Ka', gun.insert(-2, "-")).capitalize! # 〜郡を英訳
-      en_city = Kakasi.kakasi('-Ja -Ha -Ka', address.city.insert(-2, "-")).capitalize! + " #{en_gun}" # 〜町(村)を英訳、統合
+      en_city = "#{en_gun} " + Kakasi.kakasi('-Ja -Ha -Ka', address.city.insert(-2, "-")).capitalize! # 〜町(村)を英訳、統合
     else # それ以外の翻訳
       en_city = Kakasi.kakasi('-Ja -Ha -Ka', address.city.insert(-2, "-")).capitalize!
     end

@@ -10,6 +10,7 @@ require("channels")
 require('jquery')
 require('../jquery.jpostal')
 require('../address')
+require('../address_translation')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

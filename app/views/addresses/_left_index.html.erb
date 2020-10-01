@@ -1,8 +1,8 @@
 <h1 class="explanation-left">左の入力欄に住所を入力すると</h1>
-<%= form_with model: @address, url: translate_addresses_path, id: 'address_form', class: 'top-form' do |form| %>
+<%= form_with model: @address, id: 'address_form', class: 'top-form' do |form| %>
   <%= render 'shared/address_form', form: form %>
 
   <div class="actions">
-    <%= form.submit "翻訳", id: 'address_submit', class: 'submit' %>
+    <%= form.submit "翻訳", id: 'address_translate', class: 'submit' %>
   </div>
 <% end %>
