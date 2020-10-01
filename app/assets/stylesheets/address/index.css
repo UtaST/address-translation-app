@@ -25,11 +25,6 @@
   align-items: center;
 }
 
-
-.field {
-  margin: 10px;
-}
-
 .en-address-area {
   width: 50%;
   height: 100%;
@@ -40,4 +35,25 @@
   font-size: 30px;
   text-align: center;
   margin: 20px 0px 20px;
+}
+
+.en-addresses {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.en-field {
+  width: 380px;
+  height: 70px;
+  margin: 10px;
+}
+
+.en-address {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid lightblue;
 }
