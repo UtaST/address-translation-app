@@ -53,3 +53,12 @@ select {
   border: 1px solid #000;
   border-radius: 4px;
 }  
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+}

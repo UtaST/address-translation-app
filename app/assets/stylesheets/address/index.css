@@ -45,15 +45,26 @@
 }
 
 .en-field {
-  width: 380px;
+  width: 420px;
   height: 70px;
   margin: 10px;
 }
 
-.en-address {
-  width: 100%;
+.lower-en-field {
   margin-top: 10px;
+  display: flex;
+}
+
+.en-address {
+  width: 90%;
   font-size: 20px;
   padding: 10px;
   border: 2px solid lightblue;
+}
+
+.clipboard-btn-icon {
+  height: 40px;
+  padding: 2px;
+  border: 2px solid lightblue;
+  background-color: #efefef;
 }
