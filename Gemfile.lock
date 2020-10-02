@@ -291,7 +291,7 @@ DEPENDENCIES
   faker
   jbuilder (~> 2.7)
   jp_prefecture
-  kakasi (= 1.0.2)
+  kakasi
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4)
   pry-rails

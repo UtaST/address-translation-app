@@ -73,4 +73,4 @@ gem 'pry-rails'
 gem 'rails-i18n'
 
 gem 'jp_prefecture'
-gem 'kakasi', '1.0.2'
+gem 'kakasi'
