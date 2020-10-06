@@ -21,7 +21,7 @@ window.addEventListener("load", (e) => {
       const country = document.getElementById("en_country");
       // 出力する内容を変数に定義
       const addressCityAry = address.city.split(' ');
-      const addressLine1Text = `${address.house_number} ${addressCityAry[1]}`;
+      const addressLine1Text = `${address.house_number} ${address.town_name} ${addressCityAry[1]}`;
       const addressLine2Text = `${address.room_number} ${address.building_name}`;
       const cityText = addressCityAry[0]
       const stateProvinceRegionText = address.prefecture;

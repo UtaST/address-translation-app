@@ -1,6 +1,6 @@
 <div class="field">
   <%= form.label :postal_code, '郵便番号(7桁)' %><br />
-  <%= form.text_field :postal_code, placeholder: '例) 0000000(7桁)', id: 'postal_code', autofocus: true %>
+  <%= form.text_field :postal_code, placeholder: '例) 0000000(7桁)', id: 'postal_code', maxlength: "7", autofocus: true %>
 </div>
 
 <div class="field">
@@ -11,6 +11,11 @@
 <div class="field">
   <%= form.label :city, '市区町村' %><br />
   <%= form.text_field :city, placeholder: '例) 〇〇市〇〇区', id: 'city' %>
+</div>
+
+<div class="field">
+  <%= form.label :town_name, '町名' %><br />
+  <%= form.text_field :town_name, placeholder: '例) 〇〇', id: 'town_name' %>
 </div>
 
 <div class="field">
