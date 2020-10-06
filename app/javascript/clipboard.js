@@ -2,10 +2,11 @@ window.addEventListener("load", (e) => {
   const copyBtn = document.getElementsByClassName("clipboard-btn");
   for (let i = 0; i < copyBtn.length; i++ ) {
     copyBtn[i].addEventListener("click", (e) => {
-      const copyText = document.getElementsByClassName("en-address")[i].innerText;
+      const copyText = document.getElementsByClassName("en-address")[i];
       // コピーメッセージをフェードイン・フェードアウトするための準備
       const copyMessage = document.getElementById("clip-message");
-      navigator.clipboard.writeText(copyText);
+      copyText.select();
+      document.execCommand("copy");
       copyMessage.style.display = "flex";
       copyMessage.animate([{opacity: '0'}, {opacity: '1'}], 500);
       setTimeout(function() {

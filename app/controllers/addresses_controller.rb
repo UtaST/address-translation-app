@@ -20,18 +20,26 @@ class AddressesController < ApplicationController
     require 'miyabi'
     require 'romaji/core_ext/string'
     # 「部屋番号」変換
-    address.room_number.to_s.insert(0, '#')
+    unless address.room_number == ""
+      address.room_number.to_s.insert(0, '#')
+    end
 
     # 「建物名」変換
-    en_building_name = address.building_name.to_kanhira.romaji.capitalize
-    if en_building_name.match(/biru\z/) # 「〜ビル」の場合
-      en_building_name[-4, 4] = '-building'
-    elsif en_building_name.match(/manshon\z/) # 「〜マンション」の場合
-      en_building_name.insert(-8, '-')
-    elsif en_building_name.include?("apa-to") # 「〜アパート」の場合
-      en_building_name[-6, 6] = '-apartment'
+    unless address.building_name == ""
+      if address.building_name.match(/[一-龥]/)
+        en_building_name = address.building_name.to_kanhira.romaji.capitalize
+      else
+        en_building_name = address.building_name.romaji.capitalize
+      end
+      if en_building_name.match(/biru\z/) # 「〜ビル」の場合
+        en_building_name[-4, 4] = '-building'
+      elsif en_building_name.match(/manshon\z/) # 「〜マンション」の場合
+        en_building_name.insert(-8, '-')
+      elsif en_building_name.include?("apa-to") # 「〜アパート」の場合
+        en_building_name[-6, 6] = '-apartment'
+      end
+      address.building_name = en_building_name # 頭文字を大文字に変換
     end
-    address.building_name = en_building_name # 頭文字を大文字に変換
 
     # 「町名」変換
     en_town_name = address.town_name.to_kanhira.romaji.capitalize
