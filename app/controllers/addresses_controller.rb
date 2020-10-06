@@ -36,7 +36,6 @@ class AddressesController < ApplicationController
     # 「町名」変換
     en_town_name = address.town_name.to_kanhira.romaji.capitalize
     address.town_name = en_town_name
-    binding.pry
 
     # 「市区町村」変換
     city_len = address.city.length
