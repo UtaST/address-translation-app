@@ -5,11 +5,11 @@ class AddressesController < ApplicationController
   end
 
   def show
-    @address = Address.find_by(user_id: params[:id])
+    @address = Address.find_by(user_id: current_user.id)
     address_translation(@address)
     @en_address = @address
     @en_city = @en_address.city.split(' ')
-    @address = Address.find_by(user_id: params[:id])
+    @address = Address.find_by(user_id: current_user.id)
   end
 
   def translate
