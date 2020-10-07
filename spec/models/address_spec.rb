@@ -16,8 +16,8 @@ RSpec.describe Address, type: :model do
       expect(@address.errors.full_messages).to include '郵便番号を入力してください'
     end
 
-    it '郵便番号が正しく入力(xxx-xxxx)されていないと登録できないこと' do
-      @address.postal_code = 3333333
+    it '郵便番号が正しく入力(xxxxxxx)されていないと登録できないこと' do
+      @address.postal_code = 333-3333
       @address.valid?
       expect(@address.errors.full_messages).to include '郵便番号を正しく入力してください'
     end
@@ -32,6 +32,12 @@ RSpec.describe Address, type: :model do
       @address.city = nil
       @address.valid?
       expect(@address.errors.full_messages).to include '市区町村を入力してください'
+    end
+
+    it '町名が入力されていないと登録できないこと' do
+      @address.town_name = nil
+      @address.valid?
+      expect(@address.errors.full_messages).to include '町名を入力してください'
     end
 
     it '番地・号が入力されていないと登録できないこと' do
