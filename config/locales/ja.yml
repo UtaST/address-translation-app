@@ -7,5 +7,6 @@ ja:
         postal_code: 郵便番号
         prefecture: 都道府県
         city: 市区町村
+        town_name: 町名
         house_number: 番地・号
         building_name: 建物名
