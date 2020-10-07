@@ -1,10 +1,8 @@
-<h1 class="explanation-right">表示欄に英訳されて表示されます</h1>
-
 <div class="en-addresses">
   <div class="en-field">
     <div class="en-label">Address Line1</div>
     <div class="lower-en-field">
-      <textarea class="en-address" id='en_address_line1' readonly></textarea>
+      <textarea class="en-address" id='en_address_line1' readonly><%= @en_address.house_number %> <%= @en_address.town_name %> <%= @en_city[1] %></textarea>
       <button class="clipboard-btn">
         <%= image_tag 'clipboard_btn_icon.png', alt: 'コピー', class: 'clipboard-btn-icon' %>
       </button>
@@ -14,7 +12,7 @@
   <div class="en-field">
     <div class="en-label">Address Line2</div>
     <div class="lower-en-field">
-      <textarea class="en-address" id='en_address_line2' readonly></textarea>
+      <textarea class="en-address" id='en_address_line2' readonly><%= @en_address.room_number %> <%= @en_address.building_name %></textarea>
       <button class="clipboard-btn">
         <%= image_tag 'clipboard_btn_icon.png', alt: 'コピー', class: 'clipboard-btn-icon' %>
       </button>
@@ -24,7 +22,7 @@
   <div class="en-field">
     <div class="en-label">city</div>
     <div class="lower-en-field">
-      <textarea class="en-address" id='en_city' readonly></textarea>
+      <textarea class="en-address" id='en_city' readonly><%= @en_city[0] %></textarea>
       <button class="clipboard-btn">
         <%= image_tag 'clipboard_btn_icon.png', alt: 'コピー', class: 'clipboard-btn-icon' %>
       </button>
@@ -34,7 +32,7 @@
   <div class="en-field">
     <div class="en-label">State/Province/Region</div>
     <div class="lower-en-field">
-      <textarea class="en-address" id='en_state_province_region' readonly></textarea>
+      <textarea class="en-address" id='en_state_province_region' readonly><%= @en_address.prefecture %></textarea>
       <button class="clipboard-btn">
         <%= image_tag 'clipboard_btn_icon.png', alt: 'コピー', class: 'clipboard-btn-icon' %>
       </button>
@@ -44,7 +42,7 @@
   <div class="en-field">
     <div class="en-label">ZIP/Postal Code</div>
     <div class="lower-en-field">
-      <textarea class="en-address" id='en_postal_code' readonly></textarea>
+      <textarea class="en-address" id='en_postal_code' readonly><%= @en_address.postal_code %></textarea>
       <button class="clipboard-btn">
         <%= image_tag 'clipboard_btn_icon.png', alt: 'コピー', class: 'clipboard-btn-icon' %>
       </button>
@@ -54,7 +52,7 @@
   <div class="en-field">
     <div class="en-label">Country</div>
     <div class="lower-en-field">
-      <textarea class="en-address" id='en_country' readonly></textarea>
+      <textarea class="en-address" id='en_country' readonly>Japan</textarea>
       <button class="clipboard-btn">
         <%= image_tag 'clipboard_btn_icon.png', alt: 'コピー', class: 'clipboard-btn-icon' %>
       </button>

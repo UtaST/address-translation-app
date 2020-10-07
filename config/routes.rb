@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   
   root to: "addresses#index"
-  resources :addresses, only: :index do
+  resources :addresses, only: [:index, :show] do
     collection do
       post 'translate'
     end

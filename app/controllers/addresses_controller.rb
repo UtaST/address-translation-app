@@ -4,6 +4,14 @@ class AddressesController < ApplicationController
     @address = Address.new
   end
 
+  def show
+    @address = Address.find_by(user_id: params[:id])
+    address_translation(@address)
+    @en_address = @address
+    @en_city = @en_address.city.split(' ')
+    @address = Address.find_by(user_id: params[:id])
+  end
+
   def translate
     address = Address.new(address_params)
     address_translation(address)

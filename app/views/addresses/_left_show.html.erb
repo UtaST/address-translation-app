@@ -1,0 +1,66 @@
+<div class="show-addresses">
+  <div class="show-field">
+    <div class="show-label">
+      郵便番号
+    </div>
+    <div class="show-address">
+      <%= @address.postal_code %>
+    </div>
+  </div>
+
+  <div class="show-field">
+    <div class="show-label">
+      都道府県
+    </div>
+    <div class="show-address">
+      <%= @address.prefecture %>
+    </div>
+  </div>
+
+  <div class="show-field">
+    <div class="show-label">
+      市区町村
+    </div>
+    <div class="show-address">
+      <%= @address.city %>
+    </div>
+  </div>
+
+  <div class="show-field">
+    <div class="show-label">
+      町名
+    </div>
+    <div class="show-address">
+      <%= @address.town_name %>
+    </div>
+  </div>
+
+  <div class="show-field">
+    <div class="show-label">
+      番地・号
+    </div>
+    <div class="show-address">
+      <%= @address.house_number %>
+    </div>
+  </div>
+
+  <div class="show-field">
+    <div class="show-label">
+      アパート/建物名
+    </div>
+    <div class="show-address">
+      <%= @address.building_name %>
+    </div>
+  </div>
+
+  <div class="show-field">
+    <div class="show-label">
+      部屋番号
+    </div>
+    <div class="show-address">
+      <%= @address.room_number %>
+    </div>
+  </div>
+
+  <%= link_to '住所情報を変更する', addresses_edit_path, class: "edit-address-link" %>
+</div>
