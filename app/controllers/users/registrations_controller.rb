@@ -31,7 +31,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.save
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
-    redirect_to address_path
+    redirect_to address_path(id: @address.id)
   end
 
   def edit_address
@@ -40,8 +40,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def update_address
     @address = User.find(current_user.id).address
+    binding.pry
     if @address.update(address_params)
-      redirect_to address_path
+      redirect_to address_path(id: @address.id)
     else
       render :edit_address
     end
