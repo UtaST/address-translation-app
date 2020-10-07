@@ -1,4 +1,4 @@
-<div class="addresses">
+<div class="show-addresses">
   <div class="show-field">
     <div class="show-label">
       郵便番号
@@ -42,7 +42,6 @@
     <div class="show-address">
       <%= @address.house_number %>
     </div>
-    </div>
   </div>
 
   <div class="show-field">
@@ -62,4 +61,6 @@
       <%= @address.room_number %>
     </div>
   </div>
+
+  <%= link_to '住所情報を変更する', addresses_edit_path, class: "edit-address-link" %>
 </div>
