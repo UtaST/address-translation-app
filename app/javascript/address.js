@@ -5,7 +5,7 @@ $(function() {
       '#prefecture' : '%3',
       '#city' : '%4',
       '#town_name' : '%5',
-      '#house_number' : '%6%7'
+      // '#house_number' : '%6%7'
     },
   });
 });

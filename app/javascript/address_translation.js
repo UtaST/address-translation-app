@@ -23,7 +23,7 @@ window.addEventListener("load", (e) => {
       const addressCityAry = address.city.split(' ');
       let addressLine1Text = null;
       if (address.city.includes(" ")) {
-        addressLine1Text = `${address.house_number} ${address.town_name} ${address.city[1]}`;
+        addressLine1Text = `${address.house_number} ${address.town_name} ${addressCityAry[1]}`;
       } else {
         addressLine1Text = `${address.house_number} ${address.town_name}`;
       }
