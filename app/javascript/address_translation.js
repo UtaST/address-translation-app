@@ -21,7 +21,12 @@ window.addEventListener("load", (e) => {
       const country = document.getElementById("en_country");
       // 出力する内容を変数に定義
       const addressCityAry = address.city.split(' ');
-      const addressLine1Text = `${address.house_number} ${address.town_name} ${addressCityAry[1]}`;
+      let addressLine1Text = null;
+      if (address.city.includes(" ")) {
+        addressLine1Text = `${address.house_number} ${address.town_name} ${address.city[1]}`;
+      } else {
+        addressLine1Text = `${address.house_number} ${address.town_name}`;
+      }
       const addressLine2Text = `${address.room_number} ${address.building_name}`;
       const cityText = addressCityAry[0]
       const stateProvinceRegionText = address.prefecture;
