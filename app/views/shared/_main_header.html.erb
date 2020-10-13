@@ -1,4 +1,8 @@
 <header class="main-header">
+  <div class="user-pop", id="user_pop">
+    <%= image_tag 'user_explanation_popup.png', alt: 'user_pop', class: 'user-pop-img', id: 'user_pop' %>
+    <span class="user-pop-text">登録することで、住所を入力し翻訳する<br>手順を省くことができます</span>
+  </div>
   <div class="main-title">
     <h1 class="app-name">
       住所英訳アプリ
@@ -10,6 +14,7 @@
         <li><%= link_to current_user.nickname, address_path(current_user.id) %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
       <% else %>
+        <%= image_tag 'user_help.png', alt: 'help', class: 'help-icon', id: 'user_help_icon' %>
         <li><%= link_to '新規登録', new_user_registration_path %></li>
         <li><%= link_to 'ログイン', new_user_session_path %></li>
       <% end %>

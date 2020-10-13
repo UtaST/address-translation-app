@@ -6,6 +6,20 @@
   position: relative;
 }
 
+.user-pop {
+  height: 100%;
+  display: none;
+  align-items: center;
+  position: absolute;
+  right: 250px;
+}
+
+.user-pop-text {
+  font-size: 12px;
+  position: absolute;
+  left: 6px;
+}
+
 .main-title {
   position: absolute;
   left: 50px;
@@ -25,6 +39,14 @@
   width: 200px;
   display: flex;
   justify-content: space-between;
+}
+
+.help-icon {
+  height: 16px;
+  cursor: pointer;
+  position: absolute;
+  left: 62px;
+  bottom: 13px;
 }
 
 a {
