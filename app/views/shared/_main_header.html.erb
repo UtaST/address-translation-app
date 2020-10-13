@@ -10,6 +10,7 @@
         <li><%= link_to current_user.nickname, address_path(current_user.id) %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
       <% else %>
+        <%= image_tag 'user_help.png', alt: 'help', class: 'help_icon', id: 'user_help_icon' %>
         <li><%= link_to '新規登録', new_user_registration_path %></li>
         <li><%= link_to 'ログイン', new_user_session_path %></li>
       <% end %>
