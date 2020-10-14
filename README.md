@@ -8,9 +8,9 @@
 
 ### URL
 
-http://54.95.243.100/
+https://address-translation-app.herokuapp.com/
 
-### テストアカウント
+### テストアカウント *現在使用不可(修正中)
 
 **Eメール**：check1@com
 **パスワード**：check1
