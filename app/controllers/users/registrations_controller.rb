@@ -27,7 +27,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     unless @address.valid?
       render :new_address and return
     end
-    binding.pry
     @user.build_address(@address.attributes)
     @user.save
     session["devise.regist_data"]["user"].clear
