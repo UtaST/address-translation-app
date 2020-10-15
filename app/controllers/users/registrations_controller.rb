@@ -27,11 +27,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
     unless @address.valid?
       render :new_address and return
     end
+    binding.pry
     @user.build_address(@address.attributes)
     @user.save
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
-    redirect_to address_path(id: @address.id)
+    redirect_to address_path(id: @user.address.id)
   end
 
   def edit_address
