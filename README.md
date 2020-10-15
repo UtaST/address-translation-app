@@ -10,10 +10,10 @@
 
 https://address-translation-app.herokuapp.com/
 
-### テストアカウント *現在使用不可(修正中)
+### テストアカウント
 
-**Eメール**：check1@com
-**パスワード**：check1
+**Eメール**：test1@com
+**パスワード**：test11
 
 ## 制作背景
 
