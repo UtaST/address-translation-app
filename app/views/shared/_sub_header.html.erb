@@ -18,7 +18,7 @@
       <% else %>
         <li><%= link_to 'トップページ', root_path %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-        <li><%= link_to '退会', user_registration_path, method: :delete, style: "color: red;" %></li>
+        <li><%= link_to '退会', user_registration_path, method: :delete, style: "color: red;", data: { confirm: '退会しますか？(この操作は取り消せません！)' } %></li>
       <% end %>
       <%# /ページに対応して表示するリンクを変更 %>
     </ul>
